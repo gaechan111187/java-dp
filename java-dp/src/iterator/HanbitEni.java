@@ -17,12 +17,15 @@ public class HanbitEni implements HanbitEniService{
 	public int getCount(){
 		return last;
 	}
-	MyIterator it= this.iterator();
+	
+	
+	
 	@Override
 	public MyIterator iterator() {
 		return new HanbitIterator(this);
 	}
 	public Student searchByName(String findName) {
+		MyIterator it= this.iterator();
 		
 		while (it.hasNext()) {
 			Student student = (Student) it.next();
@@ -34,8 +37,9 @@ public class HanbitEni implements HanbitEniService{
 		return null;
 	}
 	public Student[] SearchBySub(String findSub){
+//		MyIterator it= this.iterator();
 			int count = 0;
-			
+			MyIterator it= this.iterator();
 			while (it.hasNext()) {
 				Student student = (Student) it.next();
 				if (student.getSubject().equals(findSub)) {

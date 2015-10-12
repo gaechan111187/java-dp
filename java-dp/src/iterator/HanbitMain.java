@@ -29,7 +29,7 @@ public class HanbitMain {
 				break;
 			case 3:	System.out.println("조회할 과목을 입력하시오.");
 					String findSub = scanner.next();
-					System.out.println(hb.SearchBySub(findSub)[1]);
+					System.out.println(hb.SearchBySub(findSub)[0]);
 					
 				break;
 			case 4:	System.out.println("총학생수는 "+hb.getCount()+"명 입니다.");
